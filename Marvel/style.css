@@ -5,6 +5,30 @@ body {
     text-align: center;
 }
 
+nav a {
+  box-shadow: 0 0 10px red, 0 0 20px yellow;
+}
+
+nav a:hover {
+  box-shadow: 0 0 20px yellow, 0 0 30px red;
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: subirSuave 0.9s;
+}
+
+
 nav {
     background: black;
     padding: 10px;
@@ -41,7 +65,7 @@ nav a:hover {
   }
   
   .card {
-    background: #1c1c1c;
+    background: #e20505;
     border-radius: 15px;
     overflow: hidden;
     width: 200px;
