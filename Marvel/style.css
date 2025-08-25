@@ -1,10 +1,10 @@
+/* --- TU CSS TAL CUAL --- */
 body {
     background: radial-gradient(circle, #ff0000, #000);
     color: white;
     margin: 0;
     text-align: center;
 }
-
 
 @keyframes subirSuave {
   from {opacity: 0; transform: translateY(40px);}
@@ -86,10 +86,8 @@ footer p {
 }
 
 
-  
-/*sobre nosotras,estilo de los logos*/
-
-  .marvel {
+/* sobre nosotras, estilo de los logos */
+.marvel {
   color: #e62429;  
   font-weight: 900;
 }
@@ -101,7 +99,7 @@ footer p {
   max-height: 150px;
 }
 
-/* estilo de la parte index amiga*/
+/* estilo de la parte index amiga */
 .heroes {
   display: flex;
   flex-direction: column;
@@ -113,36 +111,45 @@ footer p {
   background: radial-gradient(circle, #ff0000, #000); 
 }
 
-/* Para pantallas grandes */
-body {
-  font-size: 18px;
-}
-
-/* Para tablets */
+/* --- PARTE RESPONSIVE --- */
 @media (max-width: 768px) {
-  body {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav a, header .dropbtn {
     font-size: 16px;
+    padding: 8px;
+  }
+
+  footer .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-marvel,
+  .avengers-logo {
+    max-height: 100px;
+  }
+
+  .heroes {
+    padding: 20px;
+    min-height: auto;
   }
 }
 
-/* Para celulares */
 @media (max-width: 480px) {
-  body {
+  header nav a, header .dropbtn {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  footer p {
     font-size: 14px;
   }
-}
-.nav {
-  display: flex;
-  flex-wrap: wrap; /* permite que los elementos bajen a la siguiente línea */
-  justify-content: space-between;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.container {
-  width: 90%;   /* se ajusta al tamaño de la pantalla */
-  margin: 0 auto; /* centra horizontalmente */
 }
