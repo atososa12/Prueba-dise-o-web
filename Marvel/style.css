@@ -77,5 +77,62 @@ footer p {
 
 
   
+/*sobre nosotras,estilo de los logos*/
 
+  .marvel {
+  color: #e62429;  
+  font-weight: 900;
+}
 
+.logo-marvel {
+  max-height: 150px;
+}
+.avengers-logo {
+  max-height: 150px;
+}
+
+/* estilo de la parte index amiga*/
+.heroes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+  min-height: 100vh;        
+  padding: 0 20px;  
+  background: radial-gradient(circle, #ff0000, #000); 
+}
+
+/* Para pantallas grandes */
+body {
+  font-size: 18px;
+}
+
+/* Para tablets */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap; /* permite que los elementos bajen a la siguiente línea */
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.container {
+  width: 90%;   /* se ajusta al tamaño de la pantalla */
+  margin: 0 auto; /* centra horizontalmente */
+}
