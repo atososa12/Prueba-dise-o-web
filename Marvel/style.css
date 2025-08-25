@@ -5,148 +5,77 @@ body {
     text-align: center;
 }
 
-nav a {
-  box-shadow: 0 0 10px red, 0 0 20px yellow;
-}
-
-nav a:hover {
-  box-shadow: 0 0 20px yellow, 0 0 30px red;
-}
 
 @keyframes subirSuave {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity: 0; transform: translateY(40px);}
+  to   {opacity: 1; transform: translateY(0);}
 }
-
-.card {
-  animation: subirSuave 0.9s;
-}
+.card {animation: subirSuave 0.9s;}
 
 
-nav {
-    background: black;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+nav, .dropdown-content {
+  background: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
-nav a {
-    color: yellow;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 5px 15px;
-    background: red;
-    border-radius: 10px;
-    transition: transform 0.2s, background 0.3s;
-}
-nav a:hover {
-    background: yellow;
-    color: red;
-    transform: rotate(-5deg) scale(1.2);
-}
-
-/*css menu desplegable*/
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
+nav a, .dropbtn, .dropdown-content a {
   color: yellow;
   background: red;
-  border: none;
-  padding: 5px 15px;
   font-size: 20px;
+  padding: 5px 15px;
   border-radius: 10px;
+  text-decoration: none;
+  border: none;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  transition: transform 0.2s, background 0.3s, color 0.3s;
+  display: inline-block;
 }
-
-.dropbtn:hover {
+nav a:hover, .dropbtn:hover, .dropdown-content a:hover {
   background: yellow;
   color: red;
   transform: rotate(-5deg) scale(1.2);
 }
 
+
+nav a, .dropdown-content {
+  box-shadow: 0 0 10px red, 0 0 20px yellow;
+}
+nav a:hover {box-shadow: 0 0 20px yellow, 0 0 30px red;}
+
+
+.dropdown {position: relative;}
 .dropdown-content {
   display: none;
   position: absolute;
-  background: black;
+  flex-direction: column;
   min-width: 160px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px red, 0 0 20px yellow;
+  padding: 10px;
   z-index: 1;
 }
+.dropdown-content a {margin: 5px 0;}
+.dropdown:hover .dropdown-content {display: flex;}
 
-.dropdown-content a {
-  color: yellow;
-  background: red;
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
-  border-radius: 10px;
-  margin: 5px;
-  text-align: left;
-  transition: transform 0.2s, background 0.3s;
+
+footer p {
+  color:rgb(141, 112, 112);
+  text-align: center;
+}
+.social-icons a {
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
 }
 
-.dropdown-content a:hover {
-  background: yellow;
-  color: red;
-  transform: rotate(-5deg) scale(1.1);
+.social-icons a:hover {
+  color: #f00;
+  transform: scale(1.2);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
-/*aca termina*/
-
-
-.personajes {
-    text-align: center;
-    padding: 40px;
-    background: #111;
-    color: white;
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .card {
-    background: #e20505;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-  
-  .card h3 {
-    margin: 10px;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255,0,0,0.6);
-  }
   
 
 
