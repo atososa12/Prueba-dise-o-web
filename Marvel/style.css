@@ -58,7 +58,9 @@ nav a:hover {box-shadow: 0 0 20px yellow, 0 0 30px red;}
 .dropdown-content a {margin: 5px 0;}
 .dropdown:hover .dropdown-content {display: flex;}
 
-
+nav footer{
+  
+}
 footer p {
   color:rgb(141, 112, 112);
   text-align: center;
