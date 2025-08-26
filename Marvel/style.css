@@ -111,7 +111,7 @@ footer p {
   background: radial-gradient(circle, #ff0000, #000); 
 }
 
-/* --- PARTE RESPONSIVE --- */
+/* PARTE RESPONSIVE  */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
